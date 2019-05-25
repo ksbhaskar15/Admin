@@ -14,7 +14,10 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/icon/themify-icons/themify-icons.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/icon/icofont/css/icofont.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color/color-1.css') }}" id="color" />
+        <style type="text/css">
+            .error{ float: left; color: red; }
+        </style>
+
     </head>
     <body class="fix-menu">
         <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
@@ -79,5 +82,20 @@
         <script type="text/javascript" src="{{ asset('assets/lib/jquery-ui/jquery-ui.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/lib/tether/dist/js/tether.min.js') }}"></script>
         <script type="text/javascript" src="{{ asset('assets/lib/bootstrap/dist/js/bootstrap.min.js') }}"></script>  
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('form').validate({
+                    rules:{
+                        username:{ required:true },
+                        password:{ required:true }
+                    },
+                    messages:{
+                        username:{ required:"Please Enter Username" },
+                        password:{ required:"Please Enter Password" }
+                    }
+                })
+            });
+        </script>
     </body> 
 </html>
