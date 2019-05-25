@@ -16,8 +16,7 @@
         <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
         <style type="text/css">
             .error{ float: left; color: red; }
-        </style>
-
+        </style> 
     </head>
     <body class="fix-menu">
         <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
