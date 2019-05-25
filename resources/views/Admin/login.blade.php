@@ -26,6 +26,7 @@
                         <div class="login-card card-block auth-body"> 
                             <form class="md-float-material" method="post"  action="{{ url('check') }}"> 
                             	@csrf() 
+                               
                                 <div class="auth-box">
                                     <div class="row m-b-20">
                                         <div class="col-md-12">

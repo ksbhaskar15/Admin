@@ -15,12 +15,10 @@ class Checkuser
      * @return mixed
      */
     public function handle($request, Closure $next)
-    { 
-
-        dd($request);
+    {  
          if (! $request->session()->exists('user')) {
             // user value cannot be found in session  
-            //return redirect('/');
+            return redirect('/');
         }
 
         return $next($request);        

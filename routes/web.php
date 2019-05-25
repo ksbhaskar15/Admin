@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/','admin\login@login'); 
-Route::match(['get','post'],'/check','admin\login@check')->middleware('checkuser'); 
+Route::get('/','admin\login@login')->middleware('checkuser'); ; 
+Route::match(['get','post'],'/check','admin\login@check'); 
 Route::get('/dashboard','admin\dashboard@dashboard')->middleware('checkuser');
